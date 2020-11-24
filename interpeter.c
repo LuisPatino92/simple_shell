@@ -58,6 +58,9 @@ char *get_valid_exe(char *command)
 
 	path_tok = path_tokenizer();
 
+	if (path_tok == NULL)
+		return (NULL);
+
 	for (i = 0; *(path_tok + i); i++)
 	{
 		possible_path = connect(*(path_tok + i), command);
@@ -106,6 +109,9 @@ char **path_tokenizer(void)
 	for (i = 0; *(environ + i); i++)
 		if (_strncmp(*(environ + i), "PATH=", 5))
 			path_string = *(environ + i) + 5;
+
+	if (path_string == NULL)
+		return (NULL);
 
 	path_tok = _strtok(path_string, 58);
 
