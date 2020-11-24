@@ -21,7 +21,7 @@ int _strlen(char *str)
 /**
  * _strncmp - compare two strings
  *
- * @s1: string 1
+ * @s1: string 1 try
  * @s2: string 2
  * @n: bytes to compare
  *
