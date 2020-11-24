@@ -12,7 +12,7 @@ void non_interactive_mode(void)
 
 	bytes_readed = read(STDIN_FILENO, buf, 2048);
 
-	buffer = calloc(bytes_readed, sizeof(char));
+	buffer = _calloc(bytes_readed, sizeof(char));
 	if (buffer == NULL)
 		return;
 

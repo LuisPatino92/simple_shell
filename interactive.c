@@ -9,7 +9,7 @@ void interactive_mode(void)
 	char **command;
 	int loop = 0;
 
-	while (!0)
+	while (++loop)
 	{
 		show_prompt();
 		command = _getline();

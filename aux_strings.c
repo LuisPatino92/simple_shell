@@ -21,7 +21,7 @@ int _strlen(char *str)
 /**
  * _strncmp - compare two strings
  *
- * @s1: string 1 try
+ * @s1: string 1
  * @s2: string 2
  * @n: bytes to compare
  *
@@ -70,7 +70,7 @@ char **_strtok(char *str, char delimiter)
 	}
 	if (count == 0)
 		return (NULL);
-	words = calloc((count + 1), sizeof(char *));
+	words = (char **)_calloc((count + 1), sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 	count = 0;
@@ -108,7 +108,7 @@ char *write_word(char *str, char delimiter)
 	char *word;
 	int i = 0;
 
-	word = calloc((length_d(str + i, delimiter) + 1), sizeof(char));
+	word = _calloc((length_d(str + i, delimiter) + 1), sizeof(char));
 	if (word == NULL)
 		return (NULL);
 

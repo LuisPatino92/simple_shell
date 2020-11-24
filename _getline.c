@@ -31,7 +31,7 @@ char **_getline(void)
 		;
 	*(buf + i) = 0;
 
-	buffer = calloc(i + 1, sizeof(char));
+	buffer = _calloc(i + 1, sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
 

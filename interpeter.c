@@ -4,16 +4,22 @@
  * interpeter - Interprets a command
  *
  * @command: The command to be interpreted
+ * @loop: Counter of how many loops since started
  */
 
 void interpeter(char **command, int loop)
 {
 	char *executable;
+	pid_t child_detect;
 
 	executable = get_valid_exe(*command);
 	if (executable == NULL)
 	{
-		show_error(command, loop);
+		child_detect = fork();
+		wait(NULL);
+
+		if (child_detect == 0)
+			show_error(command, loop);
 	}
 	else
 	{
