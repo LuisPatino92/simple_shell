@@ -8,8 +8,6 @@
 
 int main(void)
 {
-	signal(SIGINT, signal_handler);
-
 	if (isatty(STDIN_FILENO))
 		interactive_mode();
 	else

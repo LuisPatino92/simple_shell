@@ -9,6 +9,8 @@ void interactive_mode(void)
 	char **command;
 	int loop = 0;
 
+	signal(SIGINT, signal_handler);
+
 	while (++loop)
 	{
 		show_prompt();
