@@ -18,7 +18,7 @@ char **_getline(void)
 		if (readed == 0 && i == 1)
 		{
 			write(STDOUT_FILENO, "\n", 1);
-			exit(98);
+			exit(0);
 		}
 		if (readed == 0)
 			i--;
