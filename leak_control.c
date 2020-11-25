@@ -82,7 +82,7 @@ void error_msg(char **command, int loop)
 
 	aux_buf[i] = 0;
 
-	write(STDOUT_FILENO, aux_buf, _strlen(aux_buf));
+	write(STDERR_FILENO, aux_buf, _strlen(aux_buf));
 	free(num);
 }
 
