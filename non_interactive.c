@@ -13,7 +13,9 @@ void non_interactive_mode(void)
 	bytes_readed = read(STDIN_FILENO, buf, 2048);
 
 	if (buf[0] == 10)
-		exit (0);
+	{
+		exit(0);
+	}
 
 	buffer = _calloc(bytes_readed, sizeof(char));
 	if (buffer == NULL)

@@ -9,8 +9,8 @@
 char **_getline(void)
 {
 	ssize_t readed;
-	static char buf[2048], **command = NULL, *buffer = NULL;
-	int i = 0;
+	char buf[2048], **command = NULL, *buffer = NULL;
+	int i = 0, k = 0;
 
 	do {
 		readed = read(STDIN_FILENO, buf + i, 1);
@@ -23,27 +23,29 @@ char **_getline(void)
 		if (readed == 0)
 			i--;
 	} while (*(buf + i - 1) != 10);
-
-	if (*(buf) == 10)
-		return (NULL);
-
-	for (i = 0; *(buf + i) != 10; i++)
+	for (k = 0; *(buf + k) != 10; k++)
 		;
-	*(buf + i) = 0;
-
-	buffer = _calloc(i + 1, sizeof(char));
+	*(buf + k) = 0;
+	for (i = 0; *(buf + i) != 0; i++)
+	{
+		if (*(buf + i) != 32 && *(buf + i) != 10)
+		{
+			break;
+		}
+		else if (*(buf + i + 1) == 0)
+		{
+			return (NULL);
+		}
+	}
+	buffer = _calloc(k + 1, sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
-
 	for (i = 0; *(buf + i); i++)
 		*(buffer + i) = *(buf + i);
 	*(buffer + i) = 0;
-
 	command = _strtok(buffer, 32);
 	if (command == NULL)
 		return (NULL);
-
 	free(buffer);
-
 	return (command);
 }
