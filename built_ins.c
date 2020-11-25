@@ -11,7 +11,7 @@
 
 int built_ins(char **command, __attribute__((unused))int loop)
 {
-	if (_strncmp(*(command), "exit", 4))
+	if (!_strcmp(*(command), "exit"))
 	{
 		free_dp(command);
 		exit(0);
