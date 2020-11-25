@@ -43,6 +43,7 @@ char *int_to_string(int number);
 long absolute(long n);
 int pot(int x, int y);
 char *_calloc(int nelem, int nsize);
+int _strcmp(char *s1, char *s2);
 
 /*leak_control.c*/
 void free_dp(char **to_free);
@@ -50,5 +51,8 @@ void signal_handler(int signal);
 void show_error(char **command, int loop);
 void error_msg(char **command, int loop);
 char *get_exe_name(void);
+
+/*built_ins.c*/
+int built_ins(char **command, int loop);
 
 #endif /*SHELL_H*/
