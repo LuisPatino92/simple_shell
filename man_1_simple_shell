@@ -1,0 +1,50 @@
+.TH man 1  "24 Nov 2020" "Version 1.0" "simple_shell man page"
+.SH NAME
+.B simple_shell - take commans from the standard input
+.SH SYNOPSIS
+
+#include <stdio.h>
+
+
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.B simple_shell
+
+
+.PP
+.B Return Value
+0 Sucessful
+
+.PP
+.B interactive mode
+Like a loop infinit
+
+.PP LIST Most used commands
+ls -
+/bin/ls  -
+ls -la -
+echo -
+mv -
+Ctrl C -
+Ctrl D -
+.PP
+.B non interactive mode
+
+.SH EXAMPLE
+
+non interactive mode :
+echo ls | ./a.out
+
+Interactive mode :
+
+
+
+.SH SEE ALSO
+
+.SH BUGS
+No know bugs.
+
+.SH AUTHORS
+Giraluna Gomez - Luis Patiño
