@@ -26,7 +26,7 @@ void interactive_mode(void)
 
 void show_prompt(void)
 {
-	/*char *identifier = "[\033[31m#FAKE SHELL\033[37m] /.../";
+	char *identifier = "[\033[31m#FAKE SHELL\033[37m] /.../";
 	char *current;
 	int i, j, k = 0, last_index;
 
@@ -56,8 +56,8 @@ void show_prompt(void)
 			*(current + k + j + 3) = 0;
 			break;
 		}
-	}*/
+	}
 
-	write(STDOUT_FILENO, "SHELL -> ", 9);
-	/*free(current);*/
+	write(STDOUT_FILENO, current, _strlen(current));
+	free(current);
 }
