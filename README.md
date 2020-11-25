@@ -78,3 +78,7 @@
 t all individuals having contributef content to the repository
 </tbody>
 </table>
+
+## Description of the programm
+
+The program simple_shell that takes command from the input
