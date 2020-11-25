@@ -25,7 +25,7 @@ void free_dp(char **to_free)
 
 void signal_handler(__attribute__((unused)) int signal)
 {
-	write(STDIN_FILENO, "\n", 1);
+	write(STDERR_FILENO, "\n", 1);
 	show_prompt();
 }
 

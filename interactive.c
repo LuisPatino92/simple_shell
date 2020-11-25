@@ -7,7 +7,7 @@
 void interactive_mode(void)
 {
 	char **command;
-	int loop = 0;
+	int loop = 0, built_in_check = 1;
 
 	signal(SIGINT, signal_handler);
 
@@ -17,6 +17,11 @@ void interactive_mode(void)
 		command = _getline();
 		if (command == NULL)
 			continue;
+		built_in_check = built_ins(command, loop);
+		if (built_in_check == 0)
+		{
+			continue;
+		}
 		interpeter(command, loop);
 		free_dp(command);
 	}
