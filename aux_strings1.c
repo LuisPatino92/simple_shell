@@ -96,11 +96,34 @@ char *_calloc(int nelem, int nsize)
 		return (NULL);
 
 	ptr = malloc(nelem * nsize);
-
 	if (!ptr)
 		return (NULL);
+
 	for (i = 0; i < (nelem * nsize); i++)
 		ptr[i] = 0;
 
 return (ptr);
+}
+
+/**
+ * _strcmp - comparate
+ * @s1: hello
+ * @s2: World!
+ * Return: Diference betwen letters
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int i, n = 0;
+
+	for (i = 0; s1[i] != 0; i++)
+	{
+		if (s1[i] != s2[i])
+		{
+			n = s1[i] - s2[i];
+			return (n);
+		}
+	}
+
+	return (n);
 }
