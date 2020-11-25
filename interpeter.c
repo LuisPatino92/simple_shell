@@ -10,16 +10,11 @@
 void interpeter(char **command, int loop)
 {
 	char *executable;
-	pid_t child_detect;
 
 	executable = get_valid_exe(*command);
 	if (executable == NULL)
 	{
-		child_detect = fork();
-		wait(NULL);
-
-		if (child_detect == 0)
-			show_error(command, loop);
+		show_error(command, loop);
 	}
 	else
 	{
