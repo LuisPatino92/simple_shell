@@ -6,18 +6,19 @@
 
 void non_interactive_mode(void)
 {
-	char buf[2048], *buffer = NULL, **command = NULL;
+	char buf[4096], *buffer = NULL, **command = NULL;
 	ssize_t bytes_readed;
 	int i;
 
-	bytes_readed = read(STDIN_FILENO, buf, 2048);
+	bytes_readed = read(STDIN_FILENO, buf, 4096);
+
+	if (bytes_readed == -1)
+		exit(0);
 
 	if (buf[0] == 10)
-	{
 		exit(0);
-	}
 
-	buffer = _calloc(bytes_readed, sizeof(char));
+	buffer = (char *)_calloc((int)bytes_readed, sizeof(char));
 	if (buffer == NULL)
 		return;
 

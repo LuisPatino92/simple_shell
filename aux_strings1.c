@@ -87,22 +87,27 @@ int pot(int x, int y)
  * Return: pointer
  */
 
-char *_calloc(int nelem, int nsize)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr = NULL;
-	int i;
+	unsigned int i;
+	char *P = NULL;
 
-	if (nelem == 0 || nsize == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ptr = malloc(nelem * nsize);
-	if (!ptr)
+	P = malloc(nmemb * size * sizeof(char));
+
+	if (P == NULL)
+	{
+		free(P);
 		return (NULL);
+	}
 
-	for (i = 0; i < (nelem * nsize); i++)
-		ptr[i] = 0;
+	for (i = 0; i < nmemb * size; i++)
+		*(P + i) = 0;
 
-return (ptr);
+	return (P);
+
 }
 
 /**

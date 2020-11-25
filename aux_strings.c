@@ -108,7 +108,7 @@ char *write_word(char *str, char delimiter)
 	char *word;
 	int i = 0;
 
-	word = _calloc((length_d(str + i, delimiter) + 1), sizeof(char));
+	word = (char *)_calloc((length_d(str + i, delimiter) + 1), sizeof(char));
 	if (word == NULL)
 		return (NULL);
 

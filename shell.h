@@ -8,6 +8,7 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <signal.h>
+#include <errno.h>
 
 extern char **environ;
 
@@ -42,7 +43,7 @@ int length_d(char *str, char delimiter);
 char *int_to_string(int number);
 long absolute(long n);
 int pot(int x, int y);
-char *_calloc(int nelem, int nsize);
+void *_calloc(unsigned int nmemb, unsigned int size);
 int _strcmp(char *s1, char *s2);
 
 /*leak_control.c*/
