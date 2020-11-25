@@ -9,7 +9,7 @@
 char **_getline(void)
 {
 	ssize_t readed;
-	char buf[2048], **command = NULL, *buffer = NULL;
+	char buf[5000], **command = NULL, *buffer = NULL;
 	int i = 0;
 
 	do {
