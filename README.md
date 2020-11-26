@@ -144,12 +144,12 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>executes a process</td>
 </tr>
 <tr>
-  <td>void non_interactive_mode(void) |</td>
-  <td>executes one comman passed as pipeline to STDIN</td>
+  <td>void interpeter(char **command, int loop) |</td>
+  <td>Interprets a command</td>
 </tr>
 <tr>
-  <td>void non_interactive_mode(void) |</td>
-  <td>executes one comman passed as pipeline to STDIN</td>
+  <td>char *get_valid_exe(char *command) |</td>
+  <td> finds for a valid command to execute</td>
 </tr>
 <tr>
   <td>void non_interactive_mode(void) |</td>
