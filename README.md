@@ -172,8 +172,8 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>Compare n bytes of  two strings</td>
 </tr>
 <tr>
-  <td>char *connect(char *msj1, char *msj2) |</td>
-  <td>Conect two strings</td>
+  <td>char **_strtok(char *str, char delimiter) |</td>
+  <td> Splits a string in separated words</td>
 </tr>
 <tr>
   <td>char *connect(char *msj1, char *msj2) |</td>
