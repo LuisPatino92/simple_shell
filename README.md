@@ -82,3 +82,7 @@ t all individuals having contributef content to the repository
 ## Description of the programm
 
 The program simple_shell that takes command from the input
+
+> The prompt looks like this:
+>>[#FAKE SHELL] /.../simple_shell $
+
