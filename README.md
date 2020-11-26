@@ -135,6 +135,28 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>void show_prompt(void) |</td>
   <td>Shows a prompt on the stdout</td>
 </tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+<tr>
+  <td>void execute(char *command, char **args) |</td>
+  <td>executes a process</td>
+</tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+
+
 </tbody>
 </table>
 
