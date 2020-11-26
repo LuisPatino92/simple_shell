@@ -152,13 +152,42 @@ FUNCTIONS IN A SIMPLE SHELL
   <td> finds for a valid command to execute</td>
 </tr>
 <tr>
-  <td>void non_interactive_mode(void) |</td>
-  <td>executes one comman passed as pipeline to STDIN</td>
+  <td>int include_path(char *command) |</td>
+  <td>Checks if command is a path</td>
 </tr>
-
+<tr>
+  <td>char **path_tokenizer(void) | </td>
+  <td> Tokenizes the path</td>
+</tr>
+<tr>
+  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>Conect two strings</td>
+</tr>
+<tr>
+  <td>int _strlen(char *str) |</td>
+  <td>Measure the length of a strings</td>
+</tr>
+<tr>
+  <td>int _strncmp(const char *s1, const char *s2, int n) |</td>
+  <td>Compare n bytes of  two strings</td>
+</tr>
+<tr>
+  <td>char **_strtok(char *str, char delimiter) |</td>
+  <td> Splits a string in separated words</td>
+</tr>
+<tr>
+  <td>char *write_word(char *str, char delimiter) |</td>
+  <td>Write a word in the desired direction</td>
+</tr>
+<tr>
+  <td>
+int length_d(char *str, char delimiter) |</td>
+  <td>Computes the length of a string until a delimiter</td>
+</tr>
 
 </tbody>
 </table>
+
 
 
 ## Examples
