@@ -47,7 +47,7 @@ void show_error(char **command, int loop)
  * error_msg - Makes and shows the error msg wit appropiate format
  *
  * @command: Tokenized command line
- * @loop: Counter of how many loops there are since started
+ * @loop: Counter of how many loops there are since started for line
  */
 
 void error_msg(char **command, int loop)
