@@ -99,7 +99,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(P);
 		return (NULL);
 	}
-
 	for (i = 0; i < nmemb * size; i++)
 		*(P + i) = 0;
 
@@ -126,6 +125,5 @@ int _strcmp(char *s1, char *s2)
 			return (n);
 		}
 	}
-
 	return (n);
 }
