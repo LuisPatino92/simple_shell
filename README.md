@@ -152,13 +152,21 @@ FUNCTIONS IN A SIMPLE SHELL
   <td> finds for a valid command to execute</td>
 </tr>
 <tr>
-  <td>void non_interactive_mode(void) |</td>
-  <td>executes one comman passed as pipeline to STDIN</td>
+  <td>int include_path(char *command) |</td>
+  <td>Checks if command is a path</td>
 </tr>
-
+<tr>
+  <td>char **path_tokenizer(void) | </td>
+  <td> Tokenizes the path</td>
+</tr>
+<tr>
+  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>Conect two strings</td>
+</tr>
 
 </tbody>
 </table>
+
 
 
 ## Examples
