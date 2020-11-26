@@ -106,19 +106,15 @@ This simple shell can works in:
     - Not have memory leaks
 
 
-FUNCTIONS IN A SIMPLE SHELL 
+FUNCTIONS IN SIMPLE SHELL 
 <table>
 <thead>
 <tr>
-  <th>| prototype |</th>
+  <th>| Prototype |</th>
   <th>| Description   |</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-  <td>  |</td>
-  <td>Content Cell</td>
-</tr>
 <tr>
   <td>int main(void) |</td>
   <td> Entry point to simple command line interpeter</td>
@@ -191,4 +187,63 @@ int length_d(char *str, char delimiter) |</td>
 
 
 ## Examples
+ -->
+ 	
+
+`$ ls`
+
+```
+AUTHORS     aux_strings.c   execute.c      leak_control.c      testing
+README.md   aux_strings1.c  hsh            man_1_simple_shell
+_getline.c  built_ins.c     interactive.c  non_interactive.c
+a.out       entry_point.c   interpeter.c   shell.h
+```
+
+`$ ls -l`
+
+```
+total 84
+-rw-r--r-- 1 luna luna   190 Nov 25 18:55 AUTHORS -rw-r--r-- 1 luna luna  4468 Nov 25 23:20 README.md
+-rw-r--r-- 1 luna luna   890 Nov 25 23:23 _getline.c
+-rwxr-xr-x 1 luna luna 18496 Nov 25 17:58 a.out
+-rw-r--r-- 1 luna luna  2583 Nov 25 19:09 aux_strings.c
+-rw-r--r-- 1 luna luna  1839 Nov 25 19:36 aux_strings1.c
+-rw-r--r-- 1 luna luna   564 Nov 26 11:27 built_ins.c
+-rw-r--r-- 1 luna luna   230 Nov 25 15:12 entry_point.c
+-rw-r--r-- 1 luna luna   339 Nov 25 19:42 execute.c
+-rwxr-xr-x 1 luna luna 18496 Nov 25 19:10 hsh
+-rw-r--r-- 1 luna luna  1406 Nov 25 16:56 interactive.c
+-rw-r--r-- 1 luna luna  2674 Nov 25 10:55 interpeter.c
+-rw-r--r-- 1 luna luna  1910 Nov 25 19:46 leak_control.c
+-rw-r--r-- 1 luna luna   582 Nov 25 16:57 man_1_simple_shell
+-rw-r--r-- 1 luna luna   382 Nov 26 11:27 non_interactive.c
+-rw-r--r-- 1 luna luna  1327 Nov 25 19:09 shell.h
+drwxr-xr-x 1 luna luna  4096 Nov 25 10:55 testing
+```
+
+`$ /bin/ls `
+```
+AUTHORS    _getline.c  aux_strings.c   built_ins.c    execute.c  interactive.c  leak_control.c      non_interactive.c  testing
+README.md  a.out       aux_strings1.c  entry_point.c  hsh        interpeter.c   man_1_simple_shell  shell.h
+```
+
+`$ /bin/ls /bin/ls /bin/ls`
+```
+/bin/ls /bin/ls
+```
+
+`$ echo simple example`
+```
+simple example
+```
+`$ inexistent_command`
+```
+./hsh: 1:  inexistent_command: not found
+```
+
+## _**MADE BY**_
+* _LUIS ALEJANDRO PATIÑO ARBOLEDA_
+* _GIRALUNA GOMEZ LONDOÑO_
+
+
 
