@@ -82,8 +82,8 @@ int pot(int x, int y)
 
 /**
  * _calloc - allocate memory wich has been initialized to zero
- * @nelem: amount of elements
- * @nsize: size depend data type
+ * @nmemb: amount of elements
+ * @size: size depend data type
  * Return: pointer
  */
 
