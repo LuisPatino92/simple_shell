@@ -168,8 +168,8 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>Measure the length of a strings</td>
 </tr>
 <tr>
-  <td>char *connect(char *msj1, char *msj2) |</td>
-  <td>Conect two strings</td>
+  <td>int _strncmp(const char *s1, const char *s2, int n) |</td>
+  <td>Compare n bytes of  two strings</td>
 </tr>
 <tr>
   <td>char *connect(char *msj1, char *msj2) |</td>
