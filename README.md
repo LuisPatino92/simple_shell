@@ -179,6 +179,11 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>char *write_word(char *str, char delimiter) |</td>
   <td>Write a word in the desired direction</td>
 </tr>
+<tr>
+  <td>
+int length_d(char *str, char delimiter) |</td>
+  <td>Computes the length of a string until a delimiter</td>
+</tr>
 
 </tbody>
 </table>
