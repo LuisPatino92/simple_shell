@@ -3,7 +3,7 @@
 /**
  * _getline - Reads the command from STDIN and tokenizes it
  *
- * Return: The tokenized command
+ * Return: The tokenized command or NULL at files
  */
 
 char **_getline(void)
