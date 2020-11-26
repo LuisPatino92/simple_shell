@@ -86,27 +86,27 @@ t all individuals having contributef content to the repository
 The program simple_shell that takes command from the input
 
 > The prompt looks like this:
->>[#FAKE SHELL] /.../simple_shell $
+>>`[#FAKE SHELL] /.../simple_shell $`
 
 This simple shell can works in:
 
+  - Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+  - Handle command lines with arguments
+  - Handle the PATH
+  - The prompt is displayed again each time a command has been executed.
+  -  The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+  - The command lines are made only of one word. - If an executable cannot be found, print an error message and display the prompt again.
+  - Handle errors.
+  - have to handle the “end of file” condition (Ctrl+D)
+  - Implement the exit built-in, that exits the shell
+  - Implement the env built-in, that prints the current environment
+  - Have own function _getline
+  - Handle Ctrl+C
+  - Not have memory leaks
 
-    - Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-    - Handle command lines with arguments
-    - Handle the PATH
-    - The prompt is displayed again each time a command has been executed.
-    -  The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
-    - The command lines are made only of one word. - If an executable cannot be found, print an error message and display the prompt again.
-    - Handle errors.
-    - have to handle the “end of file” condition (Ctrl+D)
-    - Implement the exit built-in, that exits the shell
-    - Implement the env built-in, that prints the current environment
-    - Have own function _getline
-    - Handle Ctrl+C
-    - Not have memory leaks
 
+## FUNCTIONS IN SIMPLE SHELL 
 
-FUNCTIONS IN SIMPLE SHELL 
 <table>
 <thead>
 <tr>
@@ -242,8 +242,8 @@ simple example
 ```
 
 ## _**MADE BY**_
-* _LUIS ALEJANDRO PATIÑO ARBOLEDA_
-* _GIRALUNA GOMEZ LONDOÑO_
+  * _LUIS ALEJANDRO PATIÑO ARBOLEDA_
+  * _GIRALUNA GOMEZ LONDOÑO_
 
 
 
