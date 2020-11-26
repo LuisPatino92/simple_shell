@@ -1,5 +1,7 @@
 #  OUR OWN BASIC SHELL
 
+This project is about how build our own simple shell program
+
 ## **FILES**
 <table>
 <thead>
@@ -12,7 +14,7 @@
 <tbody>
 <tr>
   <td>1</td>
-  <td>[link] (https://github.com/LuisPatino92/simple_shell/blob/master/README.md "README.md")</td>
+  <td> README.md</td>
   <td>...<td>
 </tr>
 <tr>
