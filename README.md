@@ -102,7 +102,8 @@ This simple shell can works in:
     - Implement the exit built-in, that exits the shell
     - Implement the env built-in, that prints the current environment
     - Have own function _getline
-    
+    - Handle Ctrl+C
+    - Not have memory leaks
 
 
 FUNCTIONS IN A SIMPLE SHELL 
