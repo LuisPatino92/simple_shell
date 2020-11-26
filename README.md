@@ -173,7 +173,7 @@ FUNCTIONS IN A SIMPLE SHELL
 </tr>
 <tr>
   <td>char **_strtok(char *str, char delimiter) |</td>
-  <td> Splits a string in separated words</td>
+  <td>Is a double pointer that  Splits a string in separated words</td>
 </tr>
 <tr>
   <td>char *write_word(char *str, char delimiter) |</td>
