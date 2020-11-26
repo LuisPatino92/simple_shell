@@ -182,7 +182,7 @@ FUNCTIONS IN A SIMPLE SHELL
 <tr>
   <td>
 int length_d(char *str, char delimiter) |</td>
-  <td>Computes the length of a string until a delimiter</td>
+  <td>Computes the length of a strings until a delimiter</td>
 </tr>
 
 </tbody>
