@@ -88,3 +88,31 @@ The program simple_shell that takes command from the input
 > The prompt looks like this:
 >>[#FAKE SHELL] /.../simple_shell $
 
+This simple shell can works in:
+
+
+
+
+FUNCTIONS IN A SIMPLE SHELL 
+<table>
+<thead>
+<tr>
+  <th>| prototype |</th>
+  <th>| Description   |</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>| Content Cell  |</td>
+  <td>Content Cell</td>
+</tr>
+<tr>
+  <td>Content Cell</td>
+  <td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+
+
+## Examples
+
