@@ -17,7 +17,6 @@ char *int_to_string(int number)
 	{
 		digits++;
 	}
-
 	if (number < 0)
 		len = digits + 1;
 	else
@@ -35,9 +34,7 @@ char *int_to_string(int number)
 	}
 	for (j = 1; i < len; i++, j++)
 	{
-
 		*(num_str + i) = ((absolute(number) / (pot(10, (digits - j)))) % 10) + 48;
-
 	}
 	*(num_str + i) = '\0';
 
