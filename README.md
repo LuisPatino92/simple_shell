@@ -176,8 +176,8 @@ FUNCTIONS IN A SIMPLE SHELL
   <td> Splits a string in separated words</td>
 </tr>
 <tr>
-  <td>char *connect(char *msj1, char *msj2) |</td>
-  <td>Conect two strings</td>
+  <td>char *write_word(char *str, char delimiter) |</td>
+  <td>Write a word in the desired direction</td>
 </tr>
 
 </tbody>
