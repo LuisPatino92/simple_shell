@@ -163,6 +163,22 @@ FUNCTIONS IN A SIMPLE SHELL
   <td>char *connect(char *msj1, char *msj2) |</td>
   <td>Conect two strings</td>
 </tr>
+<tr>
+  <td>int _strlen(char *str) |</td>
+  <td>Measure the length of a strings</td>
+</tr>
+<tr>
+  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>Conect two strings</td>
+</tr>
+<tr>
+  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>Conect two strings</td>
+</tr>
+<tr>
+  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>Conect two strings</td>
+</tr>
 
 </tbody>
 </table>
