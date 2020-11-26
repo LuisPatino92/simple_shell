@@ -116,71 +116,70 @@ This simple shell can works in:
 </thead>
 <tbody>
 <tr>
-  <td>int main(void) |</td>
+  <td>int main(void) </td>
   <td> Entry point to simple command line interpeter</td>
 </tr>
 <tr>
-  <td>char **_getline(void) |</td>
+  <td>char **_getline(void) </td>
   <td>_getline - Reads the command from STDIN and tokenizes it</td>
 </tr>
 <tr>
-  <td>void interactive_mode(void) |</td>
+  <td>void interactive_mode(void) </td>
   <td>Interactive commandline interpeter</td>
 </tr>
 <tr>
-  <td>void show_prompt(void) |</td>
+  <td>void show_prompt(void) </td>
   <td>Shows a prompt on the stdout</td>
 </tr>
 <tr>
-  <td>void non_interactive_mode(void) |</td>
+  <td>void non_interactive_mode(void) </td>
   <td>executes one comman passed as pipeline to STDIN</td>
 </tr>
 <tr>
-  <td>void execute(char *command, char **args) |</td>
+  <td>void execute(char *command, char **args) </td>
   <td>executes a process</td>
 </tr>
 <tr>
-  <td>void interpeter(char **command, int loop) |</td>
+  <td>void interpeter(char **command, int loop) </td>
   <td>Interprets a command</td>
 </tr>
 <tr>
-  <td>char *get_valid_exe(char *command) |</td>
+  <td>char *get_valid_exe(char *command) </td>
   <td> finds for a valid command to execute</td>
 </tr>
 <tr>
-  <td>int include_path(char *command) |</td>
+  <td>int include_path(char *command) </td>
   <td>Checks if command is a path</td>
 </tr>
 <tr>
-  <td>char **path_tokenizer(void) | </td>
+  <td>char **path_tokenizer(void)</td>
   <td> Tokenizes the path</td>
 </tr>
 <tr>
-  <td>char *connect(char *msj1, char *msj2) |</td>
+  <td>char *connect(char *msj1, char *msj2)</td>
   <td>Conect two strings</td>
 </tr>
 <tr>
-  <td>int _strlen(char *str) |</td>
+  <td>int _strlen(char *str)</td>
   <td>Measure the length of a strings</td>
 </tr>
 <tr>
-  <td>int _strncmp(const char *s1, const char *s2, int n) |</td>
+  <td>int _strncmp(const char *s1, const char *s2, int n) </td>
   <td>Compare n bytes of  two strings</td>
 </tr>
 <tr>
-  <td>char **_strtok(char *str, char delimiter) |</td>
+  <td>char **_strtok(char *str, char delimiter) </td>
   <td>Is a double pointer that  Splits a string in separated words</td>
 </tr>
 <tr>
-  <td>char *write_word(char *str, char delimiter) |</td>
+  <td>char *write_word(char *str, char delimiter) </td>
   <td>Write a word on the desired direction</td>
 </tr>
 <tr>
   <td>
-int length_d(char *str, char delimiter) |</td>
+int length_d(char *str, char delimiter) </td>
   <td>Computes the length of a strings until a delimiter</td>
 </tr>
-
 </tbody>
 </table>
 
