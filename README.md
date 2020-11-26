@@ -177,7 +177,7 @@ FUNCTIONS IN A SIMPLE SHELL
 </tr>
 <tr>
   <td>char *write_word(char *str, char delimiter) |</td>
-  <td>Write a word in the desired direction</td>
+  <td>Write a word on the desired direction</td>
 </tr>
 <tr>
   <td>
