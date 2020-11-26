@@ -15,7 +15,7 @@ char **_getline(void)
 	do {
 		readed = read(STDIN_FILENO, buf + i, 1);
 		i++;
-		if (readed == 0 && i == 1 || readed == -1)
+		if (readed == 0 && i == 1)
 		{
 			write(STDOUT_FILENO, "\n", 1);
 			exit(0);
