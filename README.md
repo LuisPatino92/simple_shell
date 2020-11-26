@@ -95,7 +95,7 @@ This simple shell can works in:
     - Handle command lines with arguments
     - Handle the PATH
     - The prompt is displayed again each time a command has been executed.
-    - The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+    -  The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
     - The command lines are made only of one word. - If an executable cannot be found, print an error message and display the prompt again.
     - Handle errors.
     - have to handle the “end of file” condition (Ctrl+D)
@@ -116,12 +116,24 @@ FUNCTIONS IN A SIMPLE SHELL
 </thead>
 <tbody>
 <tr>
-  <td>| Content Cell  |</td>
+  <td>  |</td>
   <td>Content Cell</td>
 </tr>
 <tr>
-  <td>Content Cell</td>
-  <td>Content Cell</td>
+  <td>int main(void) |</td>
+  <td> Entry point to simple command line interpeter</td>
+</tr>
+<tr>
+  <td>char **_getline(void) |</td>
+  <td>_getline - Reads the command from STDIN and tokenizes it</td>
+</tr>
+<tr>
+  <td>void interactive_mode(void) |</td>
+  <td>Interactive commandline interpeter</td>
+</tr>
+<tr>
+  <td>void show_prompt(void) |</td>
+  <td>Shows a prompt on the stdout</td>
 </tr>
 </tbody>
 </table>
