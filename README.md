@@ -1,5 +1,7 @@
 #  OUR OWN BASIC SHELL
 
+This project is about how build our own simple shell program
+
 ## **FILES**
 <table>
 <thead>
@@ -12,7 +14,7 @@
 <tbody>
 <tr>
   <td>1</td>
-  <td>README.md</td>
+  <td> README.md</td>
   <td>...<td>
 </tr>
 <tr>
@@ -85,4 +87,79 @@ The program simple_shell that takes command from the input
 
 > The prompt looks like this:
 >>[#FAKE SHELL] /.../simple_shell $
+
+This simple shell can works in:
+
+
+    - Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+    - Handle command lines with arguments
+    - Handle the PATH
+    - The prompt is displayed again each time a command has been executed.
+    -  The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+    - The command lines are made only of one word. - If an executable cannot be found, print an error message and display the prompt again.
+    - Handle errors.
+    - have to handle the “end of file” condition (Ctrl+D)
+    - Implement the exit built-in, that exits the shell
+    - Implement the env built-in, that prints the current environment
+    - Have own function _getline
+    - Handle Ctrl+C
+    - Not have memory leaks
+
+
+FUNCTIONS IN A SIMPLE SHELL 
+<table>
+<thead>
+<tr>
+  <th>| prototype |</th>
+  <th>| Description   |</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>  |</td>
+  <td>Content Cell</td>
+</tr>
+<tr>
+  <td>int main(void) |</td>
+  <td> Entry point to simple command line interpeter</td>
+</tr>
+<tr>
+  <td>char **_getline(void) |</td>
+  <td>_getline - Reads the command from STDIN and tokenizes it</td>
+</tr>
+<tr>
+  <td>void interactive_mode(void) |</td>
+  <td>Interactive commandline interpeter</td>
+</tr>
+<tr>
+  <td>void show_prompt(void) |</td>
+  <td>Shows a prompt on the stdout</td>
+</tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+<tr>
+  <td>void execute(char *command, char **args) |</td>
+  <td>executes a process</td>
+</tr>
+<tr>
+  <td>void interpeter(char **command, int loop) |</td>
+  <td>Interprets a command</td>
+</tr>
+<tr>
+  <td>char *get_valid_exe(char *command) |</td>
+  <td> finds for a valid command to execute</td>
+</tr>
+<tr>
+  <td>void non_interactive_mode(void) |</td>
+  <td>executes one comman passed as pipeline to STDIN</td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+## Examples
 
