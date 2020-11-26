@@ -6,35 +6,17 @@
 
 void non_interactive_mode(void)
 {
-	char buf[4096], *buffer = NULL, **command = NULL;
-	ssize_t bytes_readed;
-	int i;
+	char **command;
+	int loop = 0, built_in_check = 1;
 
-	bytes_readed = read(STDIN_FILENO, buf, 4096);
-
-	if (bytes_readed == -1)
-		exit(0);
-
-	if (buf[0] == 10)
-		exit(0);
-
-	buffer = (char *)_calloc((int)bytes_readed, sizeof(char));
-	if (buffer == NULL)
-		return;
-
-	for (i = 0; i < bytes_readed; i++)
-		*(buffer + i) = *(buf + i);
-	*(buffer + i - 1) = 0;
-
-	command = _strtok(buffer, 32);
+	command = _getline();
 	if (command == NULL)
+		exit(0);
+	built_in_check = built_ins(command, loop);
+	if (built_in_check == 0)
 	{
-		free(buffer);
-		free_dp(command);
-		return;
+		exit(0);
 	}
-
-	free(buffer);
-	interpeter(command, 1);
+	interpeter(command, loop);
 	free_dp(command);
 }

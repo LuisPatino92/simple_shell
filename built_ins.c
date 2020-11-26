@@ -12,6 +12,7 @@
 int built_ins(char **command, __attribute__((unused))int loop)
 {
 	int i;
+
 	if (!_strcmp(*(command), "exit"))
 	{
 		free_dp(command);
