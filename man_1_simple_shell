@@ -1,43 +1,102 @@
 .TH man 1  "24 Nov 2020" "Version 1.0" "simple_shell man page"
 .SH NAME
-.B simple_shell - take commans from the standard input
+.B simple_shell - our own simple simple_shell take commans from the standard input and executes them
 .SH SYNOPSIS
-
-#include <stdio.h>
-
-
-
-int _printf(const char *format, ...);
-
+.PP
+[#FAKE SHELL] /.../simple_shell $ [command]
+[#FAKE SHELL] /.../simple_shell $ [command][filename]
 .SH DESCRIPTION
-.B simple_shell
+.PP
+.B Simple shell is a command-line interpreter that provides a command line user interface for Unix-like operating systems.
 
+This shell will interpret the command from an interactive and non-interactive mode, executing the command you type in the standard input
+with or without arguments and with files. 
 
+check if the input is in interactive mode or not, in either case it will initialize the same variables that will be a char double pointer, a line counter and a biult ins checker; if it is interactive mode, it contains a signal if the input is a ctrl C to stop the execution, since there is no signal he enters the loop infito where the first thing is to show the prompt and stays waiting for the user to enter some command
+the program reads the command and tokens the line, checks if it is a built-in or not, in case it is it goes where it is and executes it, in case it is not it interprets the line it checks if it is an executable command, if it is false it shows an error message, if it is true, it executes it, releases the memory and finishes.
+
+If the process is non-interactive, after initializing the variables, it will read the user input and touch, check if it is a built-in to go to execute it and if it finds that builtin is 0 it ends, another reason for it to end is that the command is null; once the above interprets, check if it is an executable command in case it is not, it prints it and if it is, it executes it, releases it and ends
 .PP
 .B Return Value
 0 Sucessful
 
 .PP
-.B interactive mode
-Like a loop infinit
+.B 
 
 .PP LIST Most used commands
-ls -
-/bin/ls  -
-ls -la -
-echo -
-mv -
-Ctrl C -
-Ctrl D -
-.PP
-.B non interactive mode
+ls   list directory contents
+/bin/ls  go to the variable enviroment PATH find the file /bin and execute ls
+ls -l  use a long listing format
+echo  display a line of text
+mv   move (rename) files
+Ctrl C  End of file
+Ctrl D  End of a simple shell
+
+.PP BUILT in
+
+exit    cause normal process termation
+env	run a program in a modified environment
+
 
 .SH EXAMPLE
+.PP
+.B interactive mode
+`$ ls`
 
+```
+AUTHORS     aux_strings.c   execute.c      leak_control.c      testing
+README.md   aux_strings1.c  hsh            man_1_simple_shell
+_getline.c  built_ins.c     interactive.c  non_interactive.c
+a.out       entry_point.c   interpeter.c   shell.h
+```
+`$ ls -l`
+
+```
+total 84
+-rw-r--r-- 1 luna luna   190 Nov 25 18:55 AUTHORS -rw-r--r-- 1 luna luna  4468 Nov 25 23:20 README.md
+-rw-r--r-- 1 luna luna   890 Nov 25 23:23 _getline.c
+-rwxr-xr-x 1 luna luna 18496 Nov 25 17:58 a.out
+-rw-r--r-- 1 luna luna  2583 Nov 25 19:09 aux_strings.c
+-rw-r--r-- 1 luna luna  1839 Nov 25 19:36 aux_strings1.c
+-rw-r--r-- 1 luna luna   564 Nov 26 11:27 built_ins.c
+-rw-r--r-- 1 luna luna   230 Nov 25 15:12 entry_point.c
+-rw-r--r-- 1 luna luna   339 Nov 25 19:42 execute.c
+-rwxr-xr-x 1 luna luna 18496 Nov 25 19:10 hsh
+-rw-r--r-- 1 luna luna  1406 Nov 25 16:56 interactive.c
+-rw-r--r-- 1 luna luna  2674 Nov 25 10:55 interpeter.c
+-rw-r--r-- 1 luna luna  1910 Nov 25 19:46 leak_control.c
+-rw-r--r-- 1 luna luna   582 Nov 25 16:57 man_1_simple_shell
+-rw-r--r-- 1 luna luna   382 Nov 26 11:27 non_interactive.c
+-rw-r--r-- 1 luna luna  1327 Nov 25 19:09 shell.h
+drwxr-xr-x 1 luna luna  4096 Nov 25 10:55 testing
+```
+
+`$ /bin/ls `
+```
+AUTHORS    _getline.c  aux_strings.c   built_ins.c    execute.c  interactive.c  leak_control.c      non_interactive.c  testing
+README.md  a.out       aux_strings1.c  entry_point.c  hsh        interpeter.c   man_1_simple_shell  shell.h
+```
+
+`$ /bin/ls /bin/ls /bin/ls`
+```
+/bin/ls /bin/ls
+```
+
+`$ echo simple example`
+```
+simple example
+```
+`$ inexistent_command`
+```
+./hsh: 1:  inexistent_command: not found
+```
 non interactive mode :
-echo ls | ./a.out
+$ echo ls | ./a.out
+AUTHORS    _getline.c  aux_strings.c   built_ins.c    execute.c  interactive.c  leak_control.c      non_interactive.c  testing
+README.md  a.out       aux_strings1.c  entry_point.c  hsh        interpeter.c   man_1_simple_shell  shell.h
 
-Interactive mode :
+$ echo "/bin/ls /bin/ls /bin/ls"
+/bin/ls /bin/ls /bin/ls
 
 
 
