@@ -39,10 +39,13 @@ End of file
 .IP Ctrl[D]
 End of a simple shell
 
-.PP BUILT in
 
-exit    cause normal process termation
-env	run a program in a modified environment
+.SH buitl-in commands
+
+.IP exit 
+cause normal process termation
+.IP env	
+run a program in a modified environment
 
 
 .SH EXAMPLE
@@ -113,4 +116,5 @@ $ echo "/bin/ls /bin/ls /bin/ls"
 No know bugs.
 
 .SH AUTHORS
-Giraluna Gomez - Luis Patiño
+Giraluna Gomez @Giraluna1
+Luis Patiño @LuisPatino92
