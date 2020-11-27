@@ -10,7 +10,7 @@
 .B Simple shell is a command-line interpreter that provides a command line user interface for Unix-like operating systems.
 
 This shell will interpret the command from an interactive and non-interactive mode, executing the command you type in the standard input
-with or without arguments and with files. 
+with or without arguments and with files.
 
 check if the input is in interactive mode or not, in either case it will initialize the same variables that will be a char double pointer, a line counter and a biult ins checker; if it is interactive mode, it contains a signal if the input is a ctrl C to stop the execution, since there is no signal he enters the loop infito where the first thing is to show the prompt and stays waiting for the user to enter some command
 the program reads the command and tokens the line, checks if it is a built-in or not, in case it is it goes where it is and executes it, in case it is not it interprets the line it checks if it is an executable command, if it is false it shows an error message, if it is true, it executes it, releases the memory and finishes.
@@ -21,7 +21,7 @@ If the process is non-interactive, after initializing the variables, it will rea
 0 Sucessful
 
 .PP
-.B 
+.B
 .SH OPTIONS
 .PP LIST Most used commands
 .IP ls
