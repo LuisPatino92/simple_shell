@@ -22,15 +22,22 @@ If the process is non-interactive, after initializing the variables, it will rea
 
 .PP
 .B 
-
+.SH OPTIONS
 .PP LIST Most used commands
-ls   list directory contents
-/bin/ls  go to the variable enviroment PATH find the file /bin and execute ls
-ls -l  use a long listing format
-echo  display a line of text
-mv   move (rename) files
-Ctrl C  End of file
-Ctrl D  End of a simple shell
+.IP ls
+list directory contents
+.IP /bin/ls
+go to the variable enviroment PATH find the file /bin and execute ls
+.IP ls_-l
+use a long listing format
+.IP echo
+display a line of text
+.IP mv
+move (rename) files
+.IP Ctrl[C]
+End of file
+.IP Ctrl[D]
+End of a simple shell
 
 .PP BUILT in
 
