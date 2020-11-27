@@ -1,6 +1,15 @@
 #  OUR OWN BASIC SHELL
-
 This project is about how build our own simple shell program
+
+## Steps if you want try this program
+
+1. git clone https://github.com/LuisPatino92/simple_shell.git
+2. cd simple_shell
+3. For compile the shell 
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+4. Execute
+ ./hsh
+
 
 ## **FILES**
 <table>
@@ -183,6 +192,23 @@ int length_d(char *str, char delimiter) </td>
 </tbody>
 </table>
 
+## List of system calls
+* execve (man 2 execve)
+* exit (man 3 exit)
+* fork (man 2 fork)
+* free (man 3 free)
+* isatty (man 3 isatty)
+* malloc (man 3 malloc)
+* read (man 2 read)
+* signal (man 2 signal)
+* stat (__xstat) (man 2 stat)
+* wait (man 2 wait)
+* write (man 2 write)
+
+
+## FLOWCHAR
+
+![Alt](https://i.imgur.com/MDG6aqr.jpg "Flowchar")
 
 
 ## Examples
