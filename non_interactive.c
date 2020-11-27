@@ -7,7 +7,7 @@
 void non_interactive_mode(void)
 {
 	char **command;
-	int loop = 0, built_in_check = 1;
+	int built_in_check = 1, loop = 1;
 
 	command = _getline();
 	if (command == NULL)
