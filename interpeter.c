@@ -15,8 +15,15 @@ void interpeter(char **command, int loop)
 	executable = get_valid_exe(*command);
 	if (executable == NULL)
 	{
-		child_detect = fork();
-		wait(NULL);
+		if (isatty(STDIN_FILENO))
+		{
+			child_detect = fork();
+			wait(NULL);
+		}
+		else
+		{
+			child_detect = 0;
+		}
 
 		if (child_detect == 0)
 			show_error(command, loop);
