@@ -25,7 +25,7 @@ int built_ins(char **command, __attribute__((unused))int loop)
 		{
 			write(STDOUT_FILENO, *(environ + i), _strlen(*(environ + i)));
 			write(STDOUT_FILENO, "\n", 1);
-			
+
 		}
 		return (0);
 	}
