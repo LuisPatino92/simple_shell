@@ -21,6 +21,8 @@ int built_ins(char **command, __attribute__((unused))int loop)
 
 	if (!_strcmp(*(command), "env"))
 	{
+		if (environ == NULL)
+			return (0);
 		for (i = 0; *(environ + i); i++)
 		{
 			write(STDOUT_FILENO, *(environ + i), _strlen(*(environ + i)));
