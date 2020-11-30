@@ -56,7 +56,7 @@ char **_getline(void)
 char **_getline_NIM(void)
 {
 	char buf[4096], **command_token = NULL, *auxiliar = NULL;
-	char **command = NULL, **buffer;
+	char **command = NULL, *buffer;
 	int i = 0, k = 0;
 	pid_t child_detect;
 
