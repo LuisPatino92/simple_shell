@@ -82,7 +82,7 @@ char **_getline_NIM(void)
 	if (child_detect != 0)
 	{
 		free_dp(command_token);
-		command = NULL;
+		return (NULL);
 	}
 
 	return (command);
