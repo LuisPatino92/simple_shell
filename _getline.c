@@ -83,6 +83,7 @@ char **_getline_NIM(void)
 	if (child_detect != 0)
 	{
 		free_dp(command_token);
+		printf("POSITIVO");
 		return (NULL);
 	}
 	return (command);
