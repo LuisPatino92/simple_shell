@@ -63,7 +63,7 @@ char **_getline_NIM(void)
 	while (read(STDIN_FILENO, buf + i++, 1))
 		;
 	*(buf + i) = 0;
-	buffer = malloc((i + 1) * sizeof(char));
+	buffer = _calloc((i + 1), sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
 	k = i;
