@@ -60,10 +60,10 @@ char **_getline_NIM(void)
 	int i = 0, k = 0;
 	pid_t child_detect;
 
-	while (read(STDIN_FILENO, buf + i++, 1))
-		;
-	*(buf + i - 1) = 0;
-	buffer = _calloc(i, sizeof(char));
+	while (read(STDIN_FILENO, buf + i, 1))
+		i++;
+	*(buf + i) = 0;
+	buffer = _calloc((i + 1), sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
 	k = i;
