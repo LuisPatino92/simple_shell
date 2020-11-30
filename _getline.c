@@ -55,7 +55,7 @@ char **_getline(void)
 
 char **_getline_NIM(void)
 {
-	char buf[4096], **command_token = NULL, *auxiliar = NULL;
+	char buf[4096], **command_token = NULL;
 	char **command = NULL, *buffer;
 	int i = 0, k = 0;
 	pid_t child_detect;
@@ -74,14 +74,12 @@ char **_getline_NIM(void)
 	free(buffer);
 	for (i = 0; *(command_token + i); i++)
 	{
-		auxiliar = *(command_token + i);
+		command = _strtok(*(command_token + i), 32);
 		child_detect = fork();
 		wait(NULL);
 		if (child_detect == 0)
 			break;
 	}
-	if (child_detect == 0)
-		command = _strtok(auxiliar, 32);
 	if (child_detect != 0)
 	{
 		free_dp(command_token);
