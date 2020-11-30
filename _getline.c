@@ -55,36 +55,38 @@ char **_getline(void)
 
 char **_getline_NIM(void)
 {
-	char buf[4096], **command_token = NULL, *auxiliar = NULL, **command = NULL;
-	int i = 0;
+	char buf[4096], **command_token = NULL, *auxiliar = NULL;
+	char **command = NULL, **buffer;
+	int i = 0, k = 0;
 	pid_t child_detect;
 
 	while (read(STDIN_FILENO, buf + i++, 1))
 		;
-
 	*(buf + i) = 0;
-
-	command_token = _strtok(buf, 10);
-
+	buffer = malloc((i + 1) * sizeof(char));
+	if (buffer == NULL)
+		return (NULL);
+	k = i;
+	for (i = 0; i < k; i++)
+		*(buffer + i) = *(buf + i);
+	*(buffer + i) = 0;
+	command_token = _strtok(buffer, 10);
+	free(buffer);
 	for (i = 0; *(command_token + i); i++)
 	{
 		auxiliar = *(command_token + i);
 		child_detect = fork();
 		wait(NULL);
-
 		if (child_detect == 0)
 			break;
 	}
-
 	if (child_detect == 0)
 		command = _strtok(auxiliar, 32);
-
 	if (child_detect != 0)
 	{
 		free_dp(command_token);
 		return (NULL);
 	}
-
 	return (command);
 }
 
