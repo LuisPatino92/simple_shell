@@ -9,7 +9,7 @@ void non_interactive_mode(void)
 	char **command;
 	int built_in_check = 1, loop = 1;
 
-	command = _getline();
+	command = _getline_NIM();
 	if (command == NULL)
 		exit(0);
 	built_in_check = built_ins(command, loop);

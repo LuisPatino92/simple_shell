@@ -18,6 +18,7 @@ void show_prompt(void);
 
 /*_getline.c*/
 char **_getline(void);
+char **_getline_NIM(void);
 
 /*non_interactive.c*/
 void non_interactive_mode(void);
