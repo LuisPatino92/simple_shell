@@ -9,10 +9,8 @@
 
 void execute(char *command, char **args)
 {
-	ssize_t child_detect;
+	ssize_t child_detect = 0;
 
-	child_detect = fork();
-	wait(NULL);
 
 	if (child_detect == 0)
 		execve(command, args, environ);
