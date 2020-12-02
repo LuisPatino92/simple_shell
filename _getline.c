@@ -74,11 +74,13 @@ char **_getline_NIM(void)
 	free(buffer);
 	for (i = 0; *(command_token + i); i++)
 	{
-		command = _strtok(*(command_token + i), 32);
 		child_detect = fork();
 		wait(NULL);
 		if (child_detect == 0)
+		{
+			command = _strtok(*(command_token + i), 32);
 			break;
+		}
 	}
 	if (child_detect != 0)
 	{
