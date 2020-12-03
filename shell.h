@@ -22,6 +22,7 @@ char **_getline_NIM(void);
 
 /*non_interactive.c*/
 void non_interactive_mode(void);
+void interpeter_nim(char **command, int loop);
 
 /*interpeter.c*/
 void interpeter(char **command, int loop);

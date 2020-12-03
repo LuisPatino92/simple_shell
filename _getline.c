@@ -55,18 +55,22 @@ char **_getline(void)
 
 char **_getline_NIM(void)
 {
-	char buf[4096], **command_token = NULL;
-	char **command = NULL, *buffer;
+	char buf[4096], **command_token = NULL, **command = NULL, *buffer;
 	int i = 0, k = 0;
 	pid_t child_detect;
 
 	while (read(STDIN_FILENO, buf + i, 1))
 		i++;
 	*(buf + i) = 0;
-	buffer = _calloc((i + 1), sizeof(char));
+	k = i;
+	for (i = 0; *(buf + i) != 0; i++)
+		if (*(buf + i) != 32 && *(buf + i) != 10)
+			break;
+		else if (*(buf + i + 1) == 0)
+			return (NULL);
+	buffer = _calloc((k + 1), sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
-	k = i;
 	for (i = 0; i < k; i++)
 		*(buffer + i) = *(buf + i);
 	*(buffer + i) = 0;
@@ -79,6 +83,8 @@ char **_getline_NIM(void)
 		if (child_detect == 0)
 		{
 			command = _strtok(*(command_token + i), 32);
+			if (command == NULL)
+				return (NULL);
 			break;
 		}
 	}
