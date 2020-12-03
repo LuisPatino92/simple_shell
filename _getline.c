@@ -88,11 +88,9 @@ char **_getline_NIM(void)
 			break;
 		}
 	}
+	free_dp(command_token);
 	if (child_detect != 0)
-	{
-		free_dp(command_token);
-		return (NULL);
-	}
+		exit(0);
 	return (command);
 }
 
